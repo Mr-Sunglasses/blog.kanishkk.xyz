@@ -72,7 +72,7 @@ const bannerOffsetByPosition = {
 const bannerOffset =
 	bannerOffsetByPosition[siteConfig.banner.position || "center"];
 
-const finalImage = image || siteConfig.ogImage || "/og.png";
+const finalImage = siteConfig.ogImage || "/og.png";
 const imageFullUrl = new URL(url(finalImage), Astro.site);
 ---
 
