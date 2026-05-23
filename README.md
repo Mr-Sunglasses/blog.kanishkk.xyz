@@ -1,5 +1,7 @@
 # ✍️ blog.kanishkk.xyz 
 
+[**🖥️ Live Website (Hosted on Netlify)**](https://blog.kanishkk.xyz)
+
 Welcome to my personal blog powered by [astro](https://astro.build/) and [fuwari](https://github.com/saicaca/fuwari).
 
 ## Getting Started
