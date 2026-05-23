@@ -1,3 +1,13 @@
+# ✍️ blog.kanishkk.xyz 
+
+Welcome to my personal blog powered by [astro](https://astro.build/) and [fuwari](https://github.com/saicaca/fuwari).
+
+## Getting Started
+
+To get started with this blog, follow the instructions below, this repository is a fork of [fuwari](https://github.com/saicaca/fuwari) and extended with customizations for my blog.
+
+---
+
 # 🍥Fuwari  
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
