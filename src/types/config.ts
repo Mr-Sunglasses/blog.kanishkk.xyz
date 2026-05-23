@@ -37,6 +37,7 @@ export type SiteConfig = {
 
 	favicon: Favicon[];
 	ogImage?: string;
+	sourceCode?: string;
 };
 
 export type Favicon = {
