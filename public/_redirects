@@ -1,2 +1,2 @@
-/ index.html 301
-/?action=view&url=judeo-hindu-values posts/thoughts/judeo-hindu-values/ 301
+/ action=view url=judeo-hindu-values  /posts/thoughts/judeo-hindu-values/  301!
+/ action=view url=:slug  /posts/:slug/  301
