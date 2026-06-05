@@ -19,4 +19,7 @@ I love reading books and below are some of the ones I'm currently reading.
 
 ![Kafan](./images/kafan.jpg)
 
+### Animal Farm
+
+![Animal Farm](./images/animal-farmm.jpg)
 ---
