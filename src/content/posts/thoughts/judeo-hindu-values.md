@@ -5,7 +5,7 @@ description: "My thoughts on Judeo-Hindu values"
 image: "./images/cover.png"
 tags: ["thoughts", "society", "values"]
 category: Thoughts
-draft: true
+draft: false
 ---
 
 I'm a [Hindu](https://en.wikipedia.org/wiki/Hinduism) by religion and raised in a hindu devoted family. Over the years, I have made many Jewish friends, including several from Israel, and I have always felt a natural connection with them and with Israeli culture.
