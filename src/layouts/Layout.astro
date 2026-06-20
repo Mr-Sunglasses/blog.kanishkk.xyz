@@ -72,8 +72,15 @@ const bannerOffsetByPosition = {
 const bannerOffset =
 	bannerOffsetByPosition[siteConfig.banner.position || "center"];
 
-const finalImage = siteConfig.ogImage || "/og.png";
-const imageFullUrl = new URL(url(finalImage), Astro.site);
+// Use the page-provided image (e.g. a post's cover) as the OpenGraph preview
+// image when available, otherwise fall back to the site default.
+const hasImage = typeof image === "string" && image.trim() !== "";
+const finalImage = hasImage ? image : siteConfig.ogImage || "/og.png";
+const isRemoteImage =
+	finalImage.startsWith("http://") || finalImage.startsWith("https://");
+const imageFullUrl = isRemoteImage
+	? new URL(finalImage)
+	: new URL(url(finalImage), Astro.site);
 ---
 
 <!DOCTYPE html>
