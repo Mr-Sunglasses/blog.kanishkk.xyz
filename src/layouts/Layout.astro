@@ -72,8 +72,17 @@ const bannerOffsetByPosition = {
 const bannerOffset =
 	bannerOffsetByPosition[siteConfig.banner.position || "center"];
 
-const finalImage = siteConfig.ogImage || "/og.png";
-const imageFullUrl = new URL(url(finalImage), Astro.site);
+// Use the per-page image for OG/Twitter when it's a usable absolute URL
+// (post cover images are resolved to their built URL upstream); otherwise fall
+// back to the site-wide default OG image.
+const isUsableOgImage =
+	typeof image === "string" &&
+	(image.startsWith("http://") ||
+		image.startsWith("https://") ||
+		image.startsWith("data:"));
+const imageFullUrl = isUsableOgImage
+	? new URL(image, Astro.site)
+	: new URL(url(siteConfig.ogImage || "/og.png"), Astro.site);
 ---
 
 <!DOCTYPE html>
