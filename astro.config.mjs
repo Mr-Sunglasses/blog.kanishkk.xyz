@@ -29,6 +29,13 @@ export default defineConfig({
   site: "https://blog.kanishkk.xyz/",
   base: "/",
   trailingSlash: "always",
+  // Emit hashed build assets under /assets instead of the default /_astro.
+  // Social crawlers (e.g. Twitterbot) cache robots.txt per-host for ~24h; an
+  // earlier `Disallow: /_astro/` made X skip OG cover images, and that stale
+  // cache keeps applying the old rule. Serving assets from /assets sidesteps it.
+  build: {
+    assets: "assets",
+  },
   integrations: [
     tailwind({
       nesting: true,
