@@ -1,16 +1,13 @@
 import type { APIRoute } from "astro";
 
+// NOTE: We intentionally do NOT Disallow /_astro/. That directory holds hashed
+// build assets including post cover images used for OG/Twitter cards. Blocking
+// it provides no SEO benefit (these aren't pages) and breaks social previews,
+// because crawlers like Twitterbot use a primitive robots parser that ignores
+// wildcard `Allow` overrides and would refuse to fetch the card image.
 const robotsTxt = `
 User-agent: *
-Disallow: /_astro/
-# Allow built image assets so social cards (OG/Twitter) can fetch cover images.
-# A more specific Allow rule overrides the broader Disallow above.
-Allow: /_astro/*.jpg
-Allow: /_astro/*.jpeg
-Allow: /_astro/*.png
-Allow: /_astro/*.gif
-Allow: /_astro/*.webp
-Allow: /_astro/*.avif
+Allow: /
 
 Sitemap: ${new URL("sitemap-index.xml", import.meta.env.SITE).href}
 `.trim();
