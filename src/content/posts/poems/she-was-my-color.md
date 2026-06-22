@@ -11,52 +11,51 @@ draft: false
 # She Was My Color
 
 ```ansi
-
-I thought it to be an impossibility,  
-the world as I knew it  
-was dictated  
-by contrast.
-
-Gray shifts into black,  
-and white shifts into gray.  
-There had been nothing more,  
-and there had been nothing less.
-
-But one day,  
-a new kind of hue was introduced  
-to me.
-
-Ah, this hue—  
-it was infectious.
-
-Rose...
-
-That was her name.
-
-Rose...
-
-I was a hollowed canvas,  
-and she was a colorful contagion,  
-spreading a portrait of love  
-onto this vacant soul of mine.
-
-Everything she graced,  
-the color would follow.
-
-If only I had known...
-
-Red pigments are the first  
-to evanesce.
-
-For these borrowed hues  
-I will always cherish in memory.
-
-But you deserve to paint anew,  
-somewhere beyond this world.
-
-I will always look forward  
-to the day
-
-that I may gaze upon your  
-finished work.
+[31mI thought it to be an impossibility,  [0m
+[31mthe world as I knew it  [0m
+[31mwas dictated  [0m
+[31mby contrast.[0m
+[31m[0m
+[31mGray shifts into black,  [0m
+[31mand white shifts into gray.  [0m
+[31mThere had been nothing more,  [0m
+[31mand there had been nothing less.[0m
+[31m[0m
+[31mBut one day,  [0m
+[31ma new kind of hue was introduced  [0m
+[31mto me.[0m
+[31m[0m
+[31mAh, this hue—  [0m
+[31mit was infectious.[0m
+[31m[0m
+[31mRose...[0m
+[31m[0m
+[31mThat was her name.[0m
+[31m[0m
+[31mRose...[0m
+[31m[0m
+[31mI was a hollowed canvas,  [0m
+[31mand she was a colorful contagion,  [0m
+[31mspreading a portrait of love  [0m
+[31monto this vacant soul of mine.[0m
+[31m[0m
+[31mEverything she graced,  [0m
+[31mthe color would follow.[0m
+[31m[0m
+[31mIf only I had known...[0m
+[31m[0m
+[31mRed pigments are the first  [0m
+[31mto evanesce.[0m
+[31m[0m
+[31mFor these borrowed hues  [0m
+[31mI will always cherish in memory.[0m
+[31m[0m
+[31mBut you deserve to paint anew,  [0m
+[31msomewhere beyond this world.[0m
+[31m[0m
+[31mI will always look forward  [0m
+[31mto the day[0m
+[31m[0m
+[31mthat I may gaze upon your  [0m
+[31mfinished work.[0m
 ```
