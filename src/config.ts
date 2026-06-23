@@ -47,6 +47,11 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Archive,
     LinkPreset.About,
     {
+      name: "Poems",
+      url: "/poems/",
+      external: false,
+    },
+    {
       name: "tils",
       url: "https://tils.kanishkk.xyz/",
       external: true,
