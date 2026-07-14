@@ -1,4 +1,5 @@
 import type {
+  CommentConfig,
   ExpressiveCodeConfig,
   LicenseConfig,
   NavBarConfig,
@@ -88,6 +89,15 @@ export const licenseConfig: LicenseConfig = {
   enable: true,
   name: "CC BY-NC-SA 4.0",
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+};
+
+export const commentConfig: CommentConfig = {
+  enable: true,
+  // Public repo with the utterances GitHub App installed:
+  // https://github.com/apps/utterances -> install on this repo
+  repo: "Mr-Sunglasses/blog.kanishkk.xyz",
+  issueTerm: "pathname",
+  label: "comments",
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {

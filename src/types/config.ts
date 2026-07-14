@@ -79,6 +79,18 @@ export type LicenseConfig = {
 	url: string;
 };
 
+export type CommentConfig = {
+	enable: boolean;
+	// "owner/repo" of a PUBLIC repo with the utterances GitHub App installed
+	// https://github.com/apps/utterances
+	repo: string;
+	// how issues are matched to posts: "pathname" | "url" | "title" | "og:title"
+	issueTerm: "pathname" | "url" | "title" | "og:title";
+	// (Optional) restrict matching to issues with this label; also used as
+	// the label utterances creates issues with
+	label?: string;
+};
+
 export type LIGHT_DARK_MODE =
 	| typeof LIGHT_MODE
 	| typeof DARK_MODE

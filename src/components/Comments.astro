@@ -1,0 +1,69 @@
+---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import { commentConfig } from "../config";
+
+interface Props {
+	class?: string;
+}
+
+const { class: className } = Astro.props;
+const { repo, issueTerm, label } = commentConfig;
+---
+{commentConfig.enable && (
+    <div class={`card-base relative overflow-hidden py-5 px-6 ${className ?? ""}`}>
+        <div class="transition font-bold text-black/75 dark:text-white/75 mb-4">
+            {i18n(I18nKey.comments)}
+        </div>
+        <div
+            id="utterances-container"
+            data-repo={repo}
+            data-issue-term={issueTerm}
+            data-label={label ?? ""}
+        ></div>
+    </div>
+)}
+
+<script is:inline>
+    function loadUtterances() {
+        const container = document.getElementById("utterances-container");
+        if (!container) return;
+
+        container.innerHTML = "";
+
+        const isDark = document.documentElement.classList.contains("dark");
+        const script = document.createElement("script");
+        script.src = "https://utteranc.es/client.js";
+        script.async = true;
+        script.crossOrigin = "anonymous";
+        script.setAttribute("repo", container.dataset.repo);
+        script.setAttribute("issue-term", container.dataset.issueTerm);
+        if (container.dataset.label) {
+            script.setAttribute("label", container.dataset.label);
+        }
+        script.setAttribute("theme", isDark ? "github-dark" : "github-light");
+        container.appendChild(script);
+    }
+
+    function syncUtterancesTheme() {
+        const iframe = document.querySelector(
+            "#utterances-container iframe.utterances-frame",
+        );
+        if (!iframe) return;
+        const isDark = document.documentElement.classList.contains("dark");
+        iframe.contentWindow?.postMessage(
+            { type: "set-theme", theme: isDark ? "github-dark" : "github-light" },
+            "https://utteranc.es",
+        );
+    }
+
+    loadUtterances();
+
+    // The theme toggle only flips the `dark` class on <html>, so watch for
+    // that instead of hooking into the switcher component directly.
+    new MutationObserver(syncUtterancesTheme).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+    });
+
+</script>
