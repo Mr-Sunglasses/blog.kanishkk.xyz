@@ -1,4 +1,5 @@
 ---
+import { render } from "astro:content";
 import path from "node:path";
 import Comments from "@components/Comments.astro";
 import License from "@components/misc/License.astro";
@@ -10,7 +11,6 @@ import { getSortedPosts } from "@utils/content-utils";
 import { resolveOgImageUrl } from "@utils/og-image";
 import { getDir, getPostUrlBySlug } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
-import { render } from "astro:content";
 import { licenseConfig } from "src/config";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
